@@ -6,9 +6,20 @@
         <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Clásicos</h2>
         <ul>
             @for (productClassic of productsClassic; track productClassic.description) {
-                <li class="text-1xl text-lime-700" (click)="showProductDetails(productClassic.description)">
-                    {{ productClassic.name }}
-                    @if (favProducts.includes(productClassic.description)) { * }
+                <li class="text-1xl text-lime-700">
+                    <div class="bg-yellow-200 p-5 rounded-lg mb-5">
+                        <h3 class="text-center mb-2 font-bold">
+                        {{ productClassic.name }}
+                        @if (favProducts.includes(productClassic.description)) { * }
+                        </h3>
+                        <img src="/products/{{productClassic.name}}.png" alt="{{productClassic.name}}" width="200" height="200">
+                        <div class="flex justify-center">
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white p-2 rounded-lg mt-2 w-50" 
+                            (click)="showProductDetails(productClassic.description)">
+                                Ver
+                            </button>
+                        </div>
+                    </div>
                 </li>
             }
         </ul>
@@ -17,9 +28,20 @@
         <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Especiales</h2>
         <ul>
             @for (productSpecial of productsSpecial; track productSpecial.description) {
-                <li class="text-1xl text-lime-700" (click)="showProductDetails(productSpecial.description)">
-                    {{ productSpecial.name }}
-                    @if (favProducts.includes(productSpecial.description)) { * }
+                <li class="text-1xl text-lime-700">
+                    <div class="bg-yellow-200 p-5 rounded-lg mb-5">  
+                        <h3 class="text-center mb-2 font-bold">
+                        {{ productSpecial.name }}
+                        @if (favProducts.includes(productSpecial.description)) { * }
+                        </h3>
+                        <img src="/products/{{productSpecial.name}}.png" alt="{{productSpecial.name}}" width="200" height="200">
+                        <div class="flex justify-center">
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white p-2 rounded-lg mt-2 w-50" 
+                            (click)="showProductDetails(productSpecial.description)">
+                                Ver
+                            </button>
+                        </div>
+                    </div>
                 </li>
             }
         </ul>
@@ -28,9 +50,20 @@
         <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Refrescantes</h2>
         <ul>
             @for (productRefresh of productsRefresh; track productRefresh.description) {
-                <li class="text-1xl text-lime-700" (click)="showProductDetails(productRefresh.description)">
-                    {{ productRefresh.name }}
-                    @if (favProducts.includes(productRefresh.description)) { * }
+                <li class="text-1xl text-lime-700" >
+                    <div class="bg-yellow-200 p-5 rounded-lg mb-5">
+                        <h3 class="text-center mb-2 font-bold">
+                        {{ productRefresh.name }}
+                        @if (favProducts.includes(productRefresh.description)) { * }
+                        </h3>
+                        <img src="/products/{{productRefresh.name}}.png" alt="{{productRefresh.name}}" width="200" height="200">
+                        <div class="flex justify-center">
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white p-2 rounded-lg mt-2 w-50" 
+                            (click)="showProductDetails(productRefresh.description)">
+                                Ver
+                            </button>
+                        </div>
+                    </div>
                 </li>
             }
         </ul>
@@ -39,9 +72,20 @@
         <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Proteicos</h2>
         <ul>
             @for (productProtein of productsProtein; track productProtein.description) {
-                <li class="text-1xl text-lime-700" (click)="showProductDetails(productProtein.description)">
-                    {{ productProtein.name }}
-                    @if (favProducts.includes(productProtein.description)) { * }
+                <li class="text-1xl text-lime-700">
+                    <div class="bg-yellow-200 p-5 rounded-lg mb-5 font-bold">
+                        <h3 class="text-center mb-2">
+                        {{ productProtein.name }}
+                        @if (favProducts.includes(productProtein.description)) { * }
+                        </h3>
+                        <img src="/products/{{productProtein.name}}.png" alt="{{productProtein.name}}" width="200" height="200">
+                        <div class="flex justify-center">
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white p-2 rounded-lg mt-2 w-50" 
+                            (click)="showProductDetails(productProtein.description)">
+                                Ver
+                            </button>
+                        </div>
+                    </div>
                 </li>
             }
         </ul>
