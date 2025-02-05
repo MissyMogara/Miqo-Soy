@@ -52,4 +52,10 @@ export class ProductCatalogComponent {
       this.favProducts.push(product);
     }
   }
+
+  public deleteProductList(productRemove: string) {
+    if (this.favProducts.includes(productRemove)) {
+      this.favProducts = this.favProducts.filter(product => product !== productRemove);
+    }      
+  }
 }
