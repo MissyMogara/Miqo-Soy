@@ -1,0 +1,50 @@
+<h1 class="text-center text-4xl font-bold text-lime-800 mt-10 mb-10">
+    Este es nuestro catalogo de productos!
+</h1>
+<div class="flex justify-around mb-10 w-full">
+    <div>
+        <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Clásicos</h2>
+        <ul>
+            @for (productClassic of productsClassic; track productClassic.description) {
+                <li class="text-1xl text-lime-700" (click)="showProductDetails(productClassic.description)">
+                    {{ productClassic.name }}
+                    @if (favProducts.includes(productClassic.description)) { * }
+                </li>
+            }
+        </ul>
+    </div>
+    <div>
+        <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Especiales</h2>
+        <ul>
+            @for (productSpecial of productsSpecial; track productSpecial.description) {
+                <li class="text-1xl text-lime-700" (click)="showProductDetails(productSpecial.description)">
+                    {{ productSpecial.name }}
+                    @if (favProducts.includes(productSpecial.description)) { * }
+                </li>
+            }
+        </ul>
+    </div>
+    <div>
+        <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Refrescantes</h2>
+        <ul>
+            @for (productRefresh of productsRefresh; track productRefresh.description) {
+                <li class="text-1xl text-lime-700" (click)="showProductDetails(productRefresh.description)">
+                    {{ productRefresh.name }}
+                    @if (favProducts.includes(productRefresh.description)) { * }
+                </li>
+            }
+        </ul>
+    </div>
+    <div>
+        <h2 class="text-center text-2xl text-lime-800 mb-10 mt-10">Batidos Proteicos</h2>
+        <ul>
+            @for (productProtein of productsProtein; track productProtein.description) {
+                <li class="text-1xl text-lime-700" (click)="showProductDetails(productProtein.description)">
+                    {{ productProtein.name }}
+                    @if (favProducts.includes(productProtein.description)) { * }
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<app-info-box [productDetails]="productDetails()" (addProductToCart)="updateProductList($event)"></app-info-box>
